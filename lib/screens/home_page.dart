@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gurulugomi_clone/screens/all_book.dart';
 import 'package:gurulugomi_clone/screens/category.dart';
+import 'package:gurulugomi_clone/screens/search.dart';
 import 'package:gurulugomi_clone/screens/slidebar.dart';
 //import 'package:gurulugomi_clone/screens/slidebar.dart';
 
@@ -54,8 +55,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.search), onPressed: () {},
-              //onPressed: () =>Navigator.pop(context)
+              icon: Icon(Icons.search),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Search()));
+              },
             ),
             IconButton(
               icon: Icon(Icons.shopping_cart),
