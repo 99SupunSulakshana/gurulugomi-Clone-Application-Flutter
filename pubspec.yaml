@@ -41,6 +41,7 @@ dependencies:
   device_preview: ^1.0.0
   google_fonts: ^2.3.1
   wave: ^0.2.0
+  hexcolor: ^2.0.6
 
 dev_dependencies:
   flutter_test:

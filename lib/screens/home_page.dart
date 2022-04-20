@@ -5,8 +5,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gurulugomi_clone/screens/all_book.dart';
 import 'package:gurulugomi_clone/screens/category.dart';
+import 'package:gurulugomi_clone/screens/login.dart';
+import 'package:gurulugomi_clone/screens/register.dart';
 import 'package:gurulugomi_clone/screens/search.dart';
-import 'package:gurulugomi_clone/screens/slidebar.dart';
+import 'package:gurulugomi_clone/screens/splash_screen.dart';
 //import 'package:gurulugomi_clone/screens/slidebar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -50,7 +52,8 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(Icons.menu),
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Check()));
+                  context, MaterialPageRoute(builder: (context) => Login())
+                  );
             },
           ),
           actions: <Widget>[
@@ -144,7 +147,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                           Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Register()));
+                          },
                           child: Text(
                             "Login",
                             style:
@@ -164,7 +170,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           )),
                       IconButton(
                           icon: Icon(Icons.close),
-                          onPressed: () {},
+                          onPressed: () {
+
+                          },
                           iconSize: 12.0,
                           alignment: Alignment.topRight),
                     ],
